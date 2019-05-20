@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tạo giao diện fb đơn giản</title>
+    <style>
+        body {
+            font-family: Arial;
+        }
+
+        header {
+            color: white;
+            background-color: #257fce;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 45px;
+            display: block;
+            text-decoration: none;
+        }
+
+        nav {
+            position: fixed;
+            top: 45px;
+            height: 633px;
+            width: 20%;
+            background-color: #efeeff;
+            float: left;
+            border: solid gainsboro;
+        }
+
+        section {
+            top: 45px;
+            width: 65%;
+            background-color: #efeeff;
+            height: 633px;
+            float: left;
+            left: 278px;
+            position: absolute;
+
+        }
+
+        div {
+            position: fixed;
+            float: left;
+            height: 633px;
+            top: 45px;
+            height: 633px;
+            width: 17%;
+            background-color: #dfe7ff;
+            left: 1140px;
+            padding-left: 15px;
+        }
+
+        img {
+            position: absolute;
+            top: 5px;
+            left: 50px;
+        }
+
+        input {
+            position: absolute;
+            top: 5px;
+            left: 85px;
+            width: 35%;
+            height: 26px;
+        }
+        #menu, #menu ul, #menu li{
+            padding:0;
+            margin:0;
+        }
+
+        #menu li{
+            list-style: none;
+            position: relative;
+            width:100px;
+            height: 30px;
+            padding:0 20px;
+            line-height: 30px;
+            cursor:pointer;
+        }
+
+        #menu li a{
+            text-decoration:none;
+            color: #333333;
+        }
+
+        #menu li:hover{
+            background-color: #bdc7ff;
+        }
+        #menu ul ul{
+            position: absolute;
+            top:0;
+            left:160px;
+            visibility:hidden;
+        }
+
+        #menu ul li:hover ul{
+            visibility:visible;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <img src="FB.png" width="30" height="30">
+    <a><input type="text" placeholder="Tìm kiếm"></a>
+</header>
+<nav id="menu">
+    <ul>
+        <li><a href="#">Bản tin</a>
+            <ul>
+                <li><a href="#">Tin liên quan</a></li>
+                <li><a href="#">Gần đây nhất</a></li>
+                <li><a href="#">Chỉnh sửa tùy chọn</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Messenger </a>
+            <ul>
+                <li><a href="#">Bạn bè 1</a></li>
+                <li><a href="#">Bạn bè 2</a></li>
+                <li><a href="#">Bạn bè 3</a></li>
+                <li><a href="#">Bạn bè 4</a></li>
+                <li><a href="#">Bạn bè 5</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Lối tắt</a></li>
+
+        <li><a href="#">Khám phá</a></li>
+    </ul>
+</nav>
+<section>
+    <article>
+        Thông báo 1 <br>
+        <iframe src="https://www.facebook.com/"></iframe><br>
+
+        Thông báo 2 <br>
+        <iframe src="https://www.facebook.com/"></iframe><br>
+        Thông báo 3 <br>
+        <iframe src="https://www.facebook.com/"></iframe><br>
+
+    </article>
+</section>
+<div>
+    <p>Bạn bè 1</p>
+    <p>Bạn bè 2</p>
+    <p>Bạn bè 3</p>
+    <p>Bạn bè 4</p>
+    <p>Bạn bè 5</p>
+    <p>Bạn bè 6</p>
+    <p>Bạn bè 7</p>
+    <p>Bạn bè 8</p>
+    <p>Bạn bè 9</p>
+    <p>Bạn bè 10</p>
+
+</div>
+</body>
+</html>
