@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tạo form đơn giản</title>
+    <style>
+        header{
+            height: 30px;
+            background: #ffb837;
+            line-height: 30px;
+            color: white;
+        }
+        .value{
+            color: #257fce;
+            text-align: right;
+        }
+        .value2{
+            color:#257fce ;
+        }
+    </style>
+</head>
+<body>
+<form style="width: 500px">
+    <fieldset>
+        <header style="text-align: center"><b>SỞ THÍCH CỦA BẠN</b></header>
+        <table>
+            <tr>
+                <td class="value">Họ và tên</td>
+                <td><input type="text" style="width: 200px"></td>
+            </tr>
+            <tr>
+                <td class="value">Email</td>
+                <td><input type="text" style="width: 150px"></td>
+            </tr>
+            <tr>
+                <td class="value">Sở thích</td>
+                <td>
+                    <table style="color: #ffc74e">
+                        <tr>
+                            <td><label><input type="checkbox" name="sport">Thể thao</label></td>
+                            <td><label><input type="checkbox" name="music">Âm nhạc</label></td>
+                            <td><label><input type="checkbox" name="read">Đọc sách</label></td>
+                        </tr>
+                        <tr>
+                            <td><label><input type="checkbox" name="web">Lướt web</label></td>
+                            <td><label><input type="checkbox" name="game">Chơi game</label></td>
+                            <td><label><input type="checkbox" name="film">Điện ảnh</label></td>
+                        </tr>
+                        <tr>
+                            <td><label><input type="checkbox" name="travel">Du lịch</label></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td>
+                    <input type="submit" value="Gửi thông tin"><input type="Reset" value="Nhập lại">
+                </td>
+            </tr>
+        </table>
+
+    </fieldset>
+</form>
+<form style="width: 500px">
+    <fieldset style="background-color: #fff8d3">
+        <header style="text-align: left; color: blue ; background-color: #e0fff3"><b>ĐĂNG KÝ HỌC VIÊN</b></header>
+        <table>
+            <tr>
+                <td class="value2">Họ và tên</td>
+                <td><input type="text" id="name"></td>
+            </tr>
+            <tr>
+                <td  class="value2">Ngày sinh</td>
+                <td><input type="text" id="birthday"></td>
+            </tr>
+            <tr>
+                <td class="value2">Giới tính</td>
+                <td><label><input type="radio" name="male" class="gt">Nam</label>
+                    <label><input type="radio" name="male" class="gt">Nữ</label>
+                </td>
+            </tr>
+            <tr>
+                <td class="value2">Địa chỉ</td>
+                <td><textarea rows="4" cols="22"></textarea></td>
+            </tr>
+            <tr>
+                <td class="value2">Lớp</td>
+                <td><select>
+                    <option>C40119H</option>
+                    <option>C50219H</option>
+                    <option>C60319H</option>
+                    <option>C70419H</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td class="value2">Email</td>
+                <td><input type="text" id="email"></td>
+            </tr>
+            <tr>
+                <td class="value2">Điện thoại</td>
+                <td><input type="text" id="phonenum"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Đăng ký"><input type="reset" value="Nhập lại">
+            </tr>
+        </table>
+    </fieldset>
+</form>
+</body>
+</html>

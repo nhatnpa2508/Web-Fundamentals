@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .name{
+            width: 150px;
+        }
+        .num{
+            width: 100px;
+        }
+        body {
+            font-family: Arial, Tahoma;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+<form>
+    <fieldset style="width: 400px; position: absolute;">
+<h2>Order Form</h2>
+<p>What would you like to buy</p>
+<select>
+    <option>Candy</option>
+    <option>Cooki</option>
+    <option>Chocolate</option>
+    <option>Coca</option>
+    <option>Red bull</option>
+    <option>Rice</option>
+    <option>Poppy</option>
+</select>
+<form>
+<p>How many would you like to order</p>
+<label><input name="hobby" type="radio" >1 - $10</label><br>
+<label><input name="hobby" type="radio" >2 - $20</label><br>
+<label><input name="hobby" type="radio" >3 - $25</label><br>
+</form>
+<p><h3>Name <a style="color: red">*</a></h3></p>
+<input class="name" type="text" placeholder="First Name" id="firstname">
+<input class="name" type="text" placeholder="Last Name" id="lastname"><br>
+<p><h3>Email</h3></p>
+<input type="text" id="email">
+<p><h3>Phone Number</h3></p>
+<input class="num" type="text"> - <input class="num" type="text"> -<input class="num" type="text"><br>
+<input type="submit" value="submit">
+    </fieldset>
+</form>
+</body>
+</html>
