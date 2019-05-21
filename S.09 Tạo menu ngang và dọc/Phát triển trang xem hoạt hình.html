@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phát triển trang xem hoạt hình</title>
+    <style>
+        body {
+            font-family: Arial, Tahoma;
+            font-size: 12px;
+        }
+
+        header {
+            width: 100%;
+            height: 100px;
+            background: #eef0f2;
+            border: 1px solid #CDCDCD;
+        }
+
+        #menu {
+
+        }
+
+        section {
+            width: 65%;
+            height: 470px;
+            float: left;
+            background: aliceblue;
+            border: 1px solid #CDCDCD;
+        }
+
+        #right {
+            width: 34.6%;
+            height: 440px;
+            float: left;
+            background: cornsilk;
+            border: 1px solid #CDCDCD;
+            position: relative;
+            top: 30px;
+        }
+
+        footer {
+            width: 100%;
+            height: 30px;
+            clear: both;
+            background: beige;
+            border: 1px solid #CDCDCD;
+            position: fixed;
+            bottom: 0;
+        }
+
+        a.tieude {
+            font-family: "Brush Script MT";
+            font-size: 50px;
+        }
+
+        #menu {
+            height: 30px;
+            padding: 0;
+            margin: 0;
+            background-color: #000000;
+            border: 1px solid #CDCDCD;
+            width: 100%;
+            text-align: center;
+            position: absolute;
+        }
+
+        #menu ul, #menu li {
+            padding: 0;
+            margin: 0;
+        }
+
+        #menu li {
+            position: relative;
+            float: left;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        #menu li a {
+            width: 150px;
+            height: 30px;
+            display: block;
+            text-decoration: none;
+            text-align: center;
+            line-height: 30px;
+            background-color: black;
+            color: white;
+        }
+
+        #menu ul ul li a {
+            width: 200px;
+            text-align: left;
+            padding-left: 10px;
+        }
+
+        #menu li a:hover {
+            background-color: red;
+        }
+
+        #menu ul ul {
+            position: absolute;
+            top: 30px;
+            left: 15px;
+            visibility: hidden;
+        }
+
+        #menu ul li:hover ul {
+            visibility: visible;
+        }
+        #screen iframe{
+            position: absolute;
+            top: 180px;
+            left: 50px;
+        }
+        #screen p{
+            position: absolute;
+            top: 470px;
+            left: 100px;
+            font-size :40px ;
+        }
+        #screen1 iframe{
+            top: 50px;
+            position: absolute;
+        }
+        #bottom{
+            padding-right: 50px;
+            padding-top: -10px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <img src="https://sieuimba.com/wp-content/uploads/2014/12/a12.jpg" width="300" height="100"> <a class="tieude">PHIM
+    HOAT HÌNH</a>
+</header>
+<nav id="menu">
+    <ul>
+        <li><a href="#">Phim hoạt hình</a>
+            <ul>
+                <li><a href="#">Phim hoạt hình Việt Nam</a></li>
+                <li><a href="#">Phim hoạt hình Nhật Bản</a></li>
+                <li><a href="#">Phim hoạt hình Disney</a></li>
+                <li><a href="#">Phim hoạt hình ngắn</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Phim hoạt hình yêu thích</a>
+            <ul>
+                <li><a href="#">Doraemon</a></li>
+                <li><a href="#">One Piece</a></li>
+                <li><a href="#">Dragon ball</a></li>
+                <li><a href="#">Naruto</a></li>
+                <li><a href="#">Bleach</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Nhân vật hoạt hình</a>
+            <ul>
+                <li><a href="#">Doraemon</a></li>
+                <li><a href="#">Son Goku</a></li>
+                <li><a href="#">Naruto</a></li>
+                <li><a href="#">Monkey D. Luffy</a></li>
+                <li><a href="#">Sasuke</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Góp ý</a></li>
+    </ul>
+</nav>
+<section id="screen">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/iJ8cQOhZ4pM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <p>Phim hoạt hình Doraemon</p>
+</section>
+<div id="right">
+    <iframe id="screen1" width="224" height="126" src="https://www.youtube.com/embed/NcdoFuqEJR4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <a>Bảy viên ngọc rồng tập đặc biệt</a>
+    <iframe width="224" height="126" src="https://www.youtube.com/embed/U_fWyFRJYXo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <a>Boruto: hành trình chiến đấu cùng cha</a>
+    <iframe width="224" height="126"" src="https://www.youtube.com/embed/8FTuLsz-zOk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <a>Naruto: tiểu sử cuộc đời Itachi</a>
+</div>
+<footer style="font-size: large; text-align: right">
+    <p id="bottom">&reg; Website được thiết kế nhằm mục đích học tập</p>
+</footer>
+</body>
+</html>
