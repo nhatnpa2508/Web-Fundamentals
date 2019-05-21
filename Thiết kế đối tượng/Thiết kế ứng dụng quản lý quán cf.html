@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thiết kế ứng dụng quản lý quán CF</title>
+</head>
+<body>
+<script>
+class Table{
+    constructor(num,area){
+        this.num = num;
+        this.area = area;
+        this.status = false;
+        this.time = 0;
+        this.pay = 0;
+        this.money = 0;
+    }
+    checkstatus(){
+        if (this.status)
+            return "Có khách";
+        else return "Trống"
+    }
+    customerSitdown(){
+        this.status = true;
+        this.timestart = new Date();
+        document.write("Khách vào lúc "+ this.timestart + "<br>");
+    }
+    customerOut(){
+        this.status = false;
+        this.time += this.timestart - new Date();
+        document.write("Thời gian khách ngồi: "+ this.time +"<br>");
+        this.money += this.pay;
+        this.pay = 0;
+        document.write("Tổng tiền thanh toán của bàn từ lúc mở cửa: " + this.money + ". Số tiền bàn chưa được thanh toán = " + this.pay +"<br>");
+    }
+    checktable(){
+        document.write("Bàn số: " + this.num + " khu vực " + this.area +". Tình trạng: " + this.checkstatus() +"<br>")
+    }
+    order(name){
+        if (this.status) {
+            this.name = name;
+            this.name.reduce();
+            this.pay += this.name.cost;
+            document.write("Phải thanh toán: " + this.pay + "<br>");
+        }
+    }
+}
+class Drink{
+    constructor(name,cost,quantity){
+        this.name = name;
+        this.quantity = quantity;
+        this.cost = cost;
+    }
+    checkQuan(){
+        document.write(this.name + " còn lại "+ this.quantity + "<br>");
+    }
+    reduce(){
+        this.quantity--;
+    }
+}
+class Master{
+    constructor(name){
+        this.name = name;
+        this.totalMoney = [];
+        this.countTable = [];
+        this.area = [];
+    }
+    setTable(nameTable){
+        this.nameTable = nameTable;
+        this.countTable.push(this.nameTable.num);
+        this.area.push(this.nameTable.area);
+
+    }
+    setTableMoney(nameTable){
+        this.nameTable = nameTable;
+        this.totalMoney.push(this.nameTable.money);
+    }
+    checkTb(){
+        let str ="";
+        for (let i = 0; i < this.countTable.length;i++){
+            if (this.nameTable.status)
+                str +="Bàn số " +this.countTable[i] +this.area[i] + " đang có khách <br>";
+            else
+                str +="Bàn số "+ this.countTable[i] +this.area[i] + " đang trống <br>"
+        }
+        document.write(str);
+    }
+    checkTotalMoney(){
+        let str = "";
+        let money =0;
+        for (let i = 0; i < this.countTable.length;i++) {
+            str += "Số tiền bàn số " + this.countTable[i] +this.area[i] + "thu được là " + this.totalMoney[i] + "<br>";
+            money +=this.totalMoney[i];
+        }
+        document.write(str);
+        document.write("Tổng tiền thu được: " +money)
+    }
+}
+let table1 = new Table(1,'outSize');
+let table2 = new Table(2,'inSize');
+let table3 = new Table(3,'outSize');
+let table4 = new Table(4,'inSize');
+let table5 = new Table(5,'outSize');
+let table6 = new Table(6,'inSize');
+let sting = new Drink('Sting',10000,50);
+let coca = new Drink("Coca", 8000,50);
+let coffe68 = new Master("Cà phê 68", 0);
+coffe68.setTable(table1);
+coffe68.setTable(table2);
+coffe68.setTable(table3);
+coffe68.setTable(table4);
+coffe68.setTable(table5);
+coffe68.setTable(table6);
+coffe68.checkTb();
+table1.checktable();
+table1.customerSitdown();
+sting.checkQuan();
+table1.order(sting);
+sting.checkQuan();
+table1.order(coca);
+coca.checkQuan();
+table1.customerOut();
+table1.checktable();
+table1.customerSitdown();
+sting.checkQuan();
+table1.order(sting);
+sting.checkQuan();
+table1.order(coca);
+coca.checkQuan();
+table1.customerOut();
+coffe68.setTableMoney(table1);
+coffe68.setTableMoney(table2);
+coffe68.setTableMoney(table3);
+coffe68.setTableMoney(table4);
+coffe68.setTableMoney(table5);
+coffe68.setTableMoney(table6);
+coffe68.checkTotalMoney();
+
+
+</script>
+</body>
+</html>
